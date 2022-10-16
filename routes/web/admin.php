@@ -48,7 +48,7 @@ Route::get('/demo', [AdminController::class, 'admindemo'])->name('demo');
 Route::get('/index', [AdminController::class, 'demoindex'])->name('index');
 
 
-            //profile
+
             //profile
             Route::prefix('profile')->name('profile.')->group(function () {
                 Route::get('/', [ProfileController::class, 'index'])->name('index');
