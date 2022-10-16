@@ -1,0 +1,61 @@
+<html>
+<head>
+    <meta lang="fa"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body dir="rtl">
+  
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<p id="p1" style="display: none;">
+    برای اینکه یک سایت داشته باشید کافیه تصمیم بگیرید و اجراش کنید و براش روزی نیم ساعت وقت بزارید تا از چند برابر شدن مشتریانت لذت ببرین. برای داشتن یک سایت تو قدم اول تو سامانه پشتیبانی اختصاصی از مشتریان عضوتون میکنیم. حالا نوبت  نام سایت یا همون دامنه است که با کمک مشاور انتخاب میکنید، یک اسم معنا دار و زیبا و اونها را میخریم و در پنل پشتیبانیتون اضافشون میکنیم تا براحتی تمدید و مدیریتشون کنید. بعد فضایی که اطلاعات سایتتون روی آن قرار میگیره  که بهش میگن هاست پرسرعت میخریم تا سایت سریع لود بشه .
+    از حالا تا زمانی که برنامه نویسی سایت تمام بشه و بروی هاست و دامنه تنظیم و مطالب برای تست داخلش قرار داده بگیره و تنظیمات امنیت و سئو برای رشد در نتایج گوگل براتون انجام بشه ، شما وقت دارین که درباره کسب و کارتون ، محصولات یا خدماتت عکس و نوشته آماده کنید. در خصوص نحوه پرداخت برای طراحی اختصاصی قالب سایت  هم قیمت ها عالیه و هم پرداخت ها یکجا نیست . بعد از اتمام سایت تازه کارمون با هم بیشتر میشه و کلی مطلب باحال و پول ساز هست ما به شما یاد میدیم تا بتونین سریعتر به درآمد برسید. ما از صفر تا صد محتوا و اطلاعات سایت را چطور مدیریت کنید و تازه فیلم آموزش استفاده از سایت همبهتون میدیم. در کنار این امور از طراحی ست اداری ، بنر ها و گرافیک های سایت و تولید و انتشار محتوا در سایت و اینستاگرام و تلکرام و افزودن محصولاتتون در سایت در کنارتون هستیم و سفارش هر خدماتی در این حیطه باشه را براتون انجام میدیم
+
+</p>
+
+<p id="result" ></p> 
+<p style="text-align: center;">
+    <i class="fa fa-sort-desc fa-3x read-more"></i>
+</p>
+<p style="display: none" id="continue"> 
+</p>
+
+</body>
+<script src="jquery.min.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+
+<script>
+$(document).ready(function(){
+    var maxstrtext = 200;
+    var myStr = $("p").text();
+    var subStr = myStr.substring(0, maxstrtext);   
+    var lenthstr = $.trim(myStr).length  ;
+    var subStrend = myStr.substring(maxstrtext, lenthstr);  
+    document.getElementById("result").innerHTML = subStr;
+    document.getElementById("continue").innerHTML = subStrend;   
+});
+</script> 
+  
+
+<script> 
+    (function($) { 
+        $(".read-more").on('mouseover' , function(){
+            $("#continue").slideToggle(1000);
+            if($(this).hasClass("fa-sort-desc"))
+            {
+                  
+                $(this).removeClass("fa-sort-desc");
+                $(this).addClass("fa-sort-asc"); 
+  
+            }else{
+                $(this).removeClass("fa-sort-asc");
+                $(this).addClass("fa-sort-desc")
+            }
+            $(".minimize-it").show();
+        });
+    })(jQuery);
+
+</script>
+</html>

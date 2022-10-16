@@ -1,0 +1,18 @@
+
+.spanstatus{
+     padding-inline: 13px;
+        color:beige;
+        border-radius: 50px 20px;    }
+
+    .spanstatus_success{
+background-color: lawngreen ;
+}
+.spanstatus_warning{
+background-color: coral ;
+}
+.spanstatus_primary{
+background-color: blueviolet ;
+}
+
+.red{  color:red; }
+

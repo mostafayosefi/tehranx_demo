@@ -1,0 +1,68 @@
+<script> 
+
+ 
+ 
+function docReady(fn) {
+  // see if DOM is already available
+  if (
+    document.readyState === "complete" ||
+    document.readyState === "interactive"
+  ) {
+    // call on next available tick
+    setTimeout(fn, 1);
+  } else {
+    document.addEventListener("DOMContentLoaded", fn);
+  }
+}
+
+// get elements from form
+let lastName = document.getElementById("family");
+let firstName = document.getElementById("name");
+let reshte = document.getElementById("field");
+let causeEl = document.getElementById("cause"); 
+// get elements for filer
+let miroCause = document.getElementById("col_JfVmMGJ");
+let miroSubject = document.getElementById("field_1516118063510316");
+let miroSender = document.getElementById("col_SGRcGd__QSJdOe");
+let miroCreateDate = document.getElementById("col_JGQmN");
+
+function getToday() {
+  let today = new Date();
+  let d = String(today.getDate()).padStart(2, "0");
+  let m = String(today.getMonth() + 1).padStart(2, "0"); //January is 0!
+  let y = today.getFullYear();
+
+  // return y + "-" + m + "-" + d;
+  return "1400/11/04";
+}
+
+function setValues() {
+  // set values for the first time
+  let form = "درخواست مرخصی";
+  
+  var x = document.getElementById("ddl1").value;  
+    var e = document.getElementById("ddl1"); 
+var strval = e.options[e.selectedIndex].text; 
+
+  let karshenas = `${firstName.value} ${lastName.value}`;
+  let field = ` رشته ${reshte.value}`;
+  let sender = `${karshenas}${field}`;
+  let cause = causeEl.value;
+  let subject = ` ${cause} `;
+  // set filer fields
+  miroCause.value = cause;
+  miroSender.value = sender;
+  miroSubject.value = subject;
+  miroCreateDate.value = getToday();
+}
+
+docReady(() => {
+  setValues();
+});
+
+
+
+
+
+
+</script>

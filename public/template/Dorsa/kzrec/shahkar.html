@@ -1,0 +1,52 @@
+<html>
+    <head>
+
+    </head>
+    <body  >
+        <div align="center" style="direction: rtl; text-align: center;" class="EFormMessagebox" >
+            <br>
+
+
+            <div>
+                <label>نوع استعلام</label>
+                <select id="ddl2" onchange="myFunction()" >
+                    <option value="0" >کدملی</option>
+                    <option value="5" >شناسه حقوقی</option>
+                </select>
+            </div>
+            <br>
+
+            <div>
+
+                <div id="lbltxt1">
+                    کدملی
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+    </body>
+
+<script>
+
+
+
+
+function myFunction() {
+    
+var someElement = document.getElementById("ddl2").value;
+if(someElement=='0'){
+    document.getElementById("lbltxt1").innerHTML="کدملی";
+}
+if(someElement=='5'){
+    document.getElementById("lbltxt1").innerHTML="شناسه حقوقی";
+}
+
+  }
+</script>
+
+</html>
+

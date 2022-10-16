@@ -1,0 +1,235 @@
+
+
+<script>
+    $(document).keypress(function (e) { if (e.which == 13) {
+         document.getElementById("sbt1").click(); } });
+          document.getElementById("txt1").placeholder = " کد ملی را وارد کنید "; 
+          document.getElementById("txtcld1").placeholder = "فرمت 1368/02/03";
+
+</script>
+<script>
+    
+    if(document.getElementById("txt4").value=='ورودی نامعتبر') {
+        
+    document.getElementById("txt4").value = "";
+    let x = document.cookie;
+ 
+         alert(x);
+        
+        }
+
+
+</script>
+
+
+<html>
+
+<head>
+
+</head>
+
+
+<body class="mybody">
+
+
+
+<p>My Test.</p>
+
+<p>Js v.1.0.1.6.</p>
+
+
+<style>
+    .mybody{
+        background-color: #0a0c19;
+    }
+
+    #zone8{
+
+        width: 30%;
+    }
+
+    #zone8  .search-title {
+        display: table;
+        margin: 25px auto;
+        font-size: 16px;
+        font-weight: bold;
+        color: #ffffff;
+        text-align: left;
+    }
+    #zone8  .label_input {
+        display: table;
+        margin: 25px auto;
+        font-size: 14px;
+        font-weight: bold;
+        color: #ffffff;
+        text-align: left;
+    }
+
+
+    #zone8   .input-group {
+        display: table;
+        float: none !important;
+        width: 50%;
+        background-color: #fff;
+        margin: 0 auto !important;
+        position: relative;
+        border-radius: 20px;
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        border: 2px solid #979797;
+        padding: 2px;
+        font-size: 16px;
+    }
+
+    .input-group input[type="text"] {
+        padding: 5px !important;
+        box-shadow: 0 0 0 rgb(255, 255, 255);
+    }
+
+    .input-group input[type="text"]:focus {
+        outline: none !important;
+        box-shadow: 0 0 0 rgb(255, 255, 255);
+    }
+
+
+
+    .form{
+        font-weight: 400;
+        font-size: 15px;
+        padding: 8px;
+        margin-bottom: 0;
+        margin-top: 0;
+        inline-size: 30px 25px;
+        border: 30px;
+        border-color:#7077 ;
+        border-inline-width: 30px;
+    }
+
+    myhr{background-color: #fff;}
+ 
+</style>
+<div id="zone8">
+
+    <hr class="myhr">
+    <p class="search-title">Test Olaviat</p>
+
+    <form method="post" action=""   oninput="calculate(e)"      >
+ 
+        <label class="label_input" >کدملی</label>
+        <input type="text" id="txt1"  class="input-group" placeholder="کدملی"        />
+        <input type="text" id="cld1"  class="input-group" placeholder="تاریخ تولد"        />
+        <input type="number" id="txt4"  class="input-group"  value="ورودی نامعتبر"  oninput="calculate(1)"     />
+
+        <button id="sbt1" onclick="myFunction()">  ثبت </button>
+
+
+        <input type="number" id="txt5"  class="input-group"  value=""     />
+        <input type="number" id="txtfm8"  class="input-group"    />
+        <br>
+ 
+
+
+    </form>
+
+    <script>
+
+
+ calculate = function(e)
+        {
+            var ol1 = document.getElementById('txt4').value; 
+            document.getElementById('txt5').value = parseFloat(ol1) + parseFloat(ol1); 
+            let x = document.cookie; 
+
+
+            let now_time = Math.round(Date.now()/1000); 
+            let oneminute = Math.round(now_time+60);  
+
+            if(sessionStorage.getItem('check_codemelli')==null){
+                sessionStorage.setItem('check_codemelli', 1); 
+                sessionStorage.setItem('oneminute', oneminute); 
+            }else{
+               let count_check_codemelli = parseFloat(sessionStorage.getItem('check_codemelli'));
+                sessionStorage.setItem('check_codemelli', count_check_codemelli + 1 );
+                sessionStorage.setItem('oneminute', oneminute); 
+            }
+            
+            if((sessionStorage.getItem('oneminute')!=null)&&(sessionStorage.getItem('oneminute') > now_time ) &&(sessionStorage.getItem('check_codemelli') > 2 ) ){ 
+               
+                document.getElementById("sbt1").disabled = true; 
+            document.getElementById('txt1').value = '';
+            document.getElementById('cld1').value = '';
+                alert ('user is block');  
+            } else{
+                alert('not null'+sessionStorage.getItem('oneminute')); 
+
+            } 
+
+            
+            alert(sessionStorage.getItem('check_codemelli'));
+
+ 
+            // sessionStorage.removeItem('oneminute'); 
+            // sessionStorage.clear();
+
+  
+
+        }
+    </script>
+
+
+
+<hr>
+
+ 
+
+</div>
+
+
+<p id="demo"  style="background-color: #fff;"></p>
+
+
+
+<hr>
+
+
+<div>
+
+    
+<form>
+    Select your favorite fruit:
+    <select id="ddl1" onchange="myFunction()" >
+        <option value="0">درخواست وام</option> 
+      <option value="1">ثبت مرخصی</option>
+    </select>
+
+
+    <textarea rows="5" id="txt1" ></textarea>
+
+  </form>
+  
+  <p>Click the button to return the value of the selected fruit.</p>
+  
+  <!-- <button type="button" onclick="myFunction()">Try it</button> -->
+  
+  <p id="demo"></p>
+  
+  <script>
+  function myFunction() {
+    var x = document.getElementById("ddl1").value; 
+    if(x=='1'){
+        document.getElementById("txt2").value = "";
+        document.getElementById("txt2").value = "با سلام و احترام در خواست ثبت مرخصی از تاریخ ... تا تاریخ .... برای من فعال شد";
+    }else if(x=='0'){
+        document.getElementById("txt2").value = "";
+        document.getElementById("txt2").value = "درخواست ثبت وام من به مبلغ .... باموفقیت انجام شد";    }
+  }
+  </script>
+
+</div>
+
+
+
+</body>
+
+
+</html>

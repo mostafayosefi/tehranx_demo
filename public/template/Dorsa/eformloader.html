@@ -1,0 +1,34 @@
+<html>
+    <head>
+
+    </head>
+    <body onload="myFunction()">
+        <div align="center" style="direction: rtl; text-align: center;" class="EFormMessagebox" >
+            <br>
+            <span id="lblShowMessage">اطلاعات با موفقیت ثبت شد.<br> <br>12439</span><br>
+            <span id="lblTrackingCode"></span><br>
+            <span id="lblSendEmailMessage"></span><br>
+            <a id="hlpBack" href="https://my.karshenasan.ir/DorsaFormLoader/ViewAdvEForm.aspx?lang=1&amp;sub=2&amp;tempname=dashboard&amp;code=1066&amp;ShowNewForm=False&amp;cap=128174">ثبت فرم جدید</a>
+            <br>
+        </div>
+    </body>
+
+<script>
+    
+function myFunction() {
+    
+var someElement = document.getElementById("lblShowMessage").innerHTML;
+var someElementToString = someElement.toString(); 
+ myArray = someElementToString.split(" ");
+ let trakingcode_v_br = myArray[5];
+ let result = trakingcode_v_br.replace("<br>", ""); 
+ let showfinal ="نامه شما با شماره "+result+" در دبیرخانه کانون استان تهران ثبت گردید.";
+
+ document.getElementById("lblShowMessage").innerHTML= showfinal;
+
+alert(showfinal);
+  }
+</script>
+
+</html>
+

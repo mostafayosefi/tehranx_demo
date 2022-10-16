@@ -1,0 +1,15 @@
+https://python.plainenglish.io/instagram-bot-using-python-and-instabot-d4acca37f984
+
+https://developers.facebook.com/docs/instagram
+
+
+https://www.codexworld.com/login-with-instagram-using-php/
+
+
+https://www.altamira.ai/blog/how-to-integrate-instagram-api-and-feed-on-php-website/
+
+
+https://usefulangle.com/post/25/instagram-login-api-with-php-curl
+
+
+https://api.instagram.com/oauth/authorize/
