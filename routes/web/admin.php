@@ -50,6 +50,8 @@ Route::get('/index', [AdminController::class, 'demoindex'])->name('index');
 
 
             //profile
+            //profile
+            //profile
             Route::prefix('profile')->name('profile.')->group(function () {
                 Route::get('/', [ProfileController::class, 'index'])->name('index');
                 Route::get('/show', [ProfileController::class, 'show'])->name('show');
